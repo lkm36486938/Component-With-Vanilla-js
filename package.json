@@ -1,0 +1,24 @@
+{
+  "name": "component-with-vanilla",
+  "version": "1.0.0",
+  "description": "황준일님의 블로그 코드카피",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkm36486938/Component-With-Vanilla-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lkm36486938/Component-With-Vanilla-js/issues"
+  },
+  "homepage": "https://github.com/lkm36486938/Component-With-Vanilla-js#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "http": "0.0.1-security"
+  }
+}

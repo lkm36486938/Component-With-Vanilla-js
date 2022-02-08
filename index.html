@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -11,57 +11,6 @@
 <body>
     <div id="app"></div>
 </body>
-<script>
-    // 컴포넌트의 사용방법을 강제 할 수 있기에 코드를 유지보수하고 관리할 때 이롭다.
-    class Component {
-        $target; // render method target
-        $state; // 상태 값
-
-        constructor($target) {
-            this.$target = $target;
-            this.setup();
-            this.render();
-        }
-
-        setup() { } // initialize 메소드
-        template() { return '' } // html string 을 return 하는 메소드
-        render() { // html 렌더링 및 이벤트세팅 호출
-            this.$target.innerHTML = this.template();
-            this.setEvent();
-        }
-
-        setEvent() { } // 이벤트 세팅
-        setState(newState) { // 상태값 세팅 후 render 메소드 호출
-            this.$state = { ...this.$state, ...newState }
-            this.render()
-        }
-    }
-
-    class App extends Component {
-        setup() {
-            this.$state = { items: ['item1', 'item2'] }
-        }
-
-        template() {
-            const { items } = this.$state
-            return `
-                <ul>
-                    ${items.map(item => `<li>${item}</li>`).join('')}
-                </ul>
-                <button>추가</button>
-            `
-        }
-
-        setEvent() {
-            this.$target.querySelector('button').addEventListener('click', () => {
-                const { items } = this.$state;
-                this.setState({ items: [...items, `item${items.length + 1}`] })
-            })
-        }
-    }
-
-    new App(document.querySelector('#app'))
-
-</script>
-
+<!-- http-server 에서 src폴더를 기준으로 정적파일을 제공하므로 ./src/app.js 가 아닌 ./app.js -->
+<script src="./app.js" type="module"></script>
 </html>

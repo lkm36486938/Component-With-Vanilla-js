@@ -17,5 +17,3 @@ https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Component/#_1-%E1%
     └── core                # 구현에 필요한 코어들
         └── Component.js
 ```
-
-committest
